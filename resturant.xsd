@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="www.abc.com/resturant" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="resturant">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="placename">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" maxOccurs="unbounded" name="place" type="xs:string"></xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element minOccurs="0" name="cafename">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:choice maxOccurs="unbounded">
+								<xs:element minOccurs="0" maxOccurs="unbounded" name="cafe" type="xs:string"></xs:element>
+								<xs:element minOccurs="0" maxOccurs="unbounded" name="time" type="xs:string"></xs:element>
+							</xs:choice>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element minOccurs="0" name="menu">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:simpleType name="foodtype" type="xs:string">
+							    <xs:restriction base="xs:string">
+							        <xs:enumeration value="Italian"/>
+									<xs:enumeration value="Chinese"/>
+									<xs:enumeration value="American"/>
+									<xs:enumeration value="Deserts"/>
+									<xs:enumeration value="Beverages"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element minOccurs="0" name="food">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" maxOccurs="unbounded" name="fooditem">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element minOccurs="0" name="name" type="xs:string"></xs:element>
+										<xs:element minOccurs="0" name="cost" type="xs:string"></xs:element>
+									</xs:sequence>
+									<xs:attribute name="type" type="xs:string" use="optional"></xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element minOccurs="0" name="Ambience">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" maxOccurs="unbounded" name="type" type="xs:string"></xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element minOccurs="0" name="travel">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" maxOccurs="unbounded" name="traveltype">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:choice maxOccurs="unbounded">
+											<xs:element minOccurs="0" maxOccurs="unbounded" name="name" type="xs:string"></xs:element>
+											<xs:element minOccurs="0" maxOccurs="unbounded" name="price" type="xs:string"></xs:element>
+											<xs:element minOccurs="0" maxOccurs="unbounded" name="own" type="xs:string"></xs:element>
+										</xs:choice>
+									</xs:sequence>
+									<xs:attribute name="type" type="xs:string" use="optional"></xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+                <xs:element>
+                   <xs:simpleType name="modeType">
+                     <xs:restriction base="xs:string">
+                       <xs:enumeration value="Gpay"/>
+                       <xs:enumeration value="PhonePe"/>
+                       <xs:enumeration value="PayTM"/>
+                     </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+				<xs:element minOccurs="0" name="discount">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element minOccurs="0" maxOccurs="unbounded" name="voucher" type="xs:string"></xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
