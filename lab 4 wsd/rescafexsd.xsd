@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.abc.com/resturant"
+           targetNamespace="http://www.abc.com/resturant"
+           elementFormDefault="qualified">
+
+  <xs:element name="resturant">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="placename">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="place" type="xs:string" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cafename">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cafe" type="xs:string" maxOccurs="unbounded"/>
+              <xs:element name="time" type="xs:string" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="menu">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="foodtype" type="xs:string" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="food">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fooditem" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                    <xs:element name="cost" type="xs:string"/>
+                  </xs:sequence>
+                  <xs:attribute name="type" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Ambience">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="type" type="xs:string" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="travel">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="traveltype" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="price" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="own" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                  </xs:sequence>
+                  <xs:attribute name="type" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="payment">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="mode" type="xs:string" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="discount">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="voucher" type="xs:string" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+</xs:schema>

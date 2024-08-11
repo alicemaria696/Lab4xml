@@ -1,0 +1,23 @@
+<!ELEMENT resturant (placename, cafename, menu, food, Ambience, travel, payment, discount)>
+<!ELEMENT placename (place+)>
+<!ELEMENT place (#PCDATA)>
+<!ELEMENT cafename (cafe, time)+>
+<!ELEMENT cafe (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT menu (foodtype+)>
+<!ELEMENT foodtype (#PCDATA)>
+<!ELEMENT food (fooditem+)>
+<!ATTLIST fooditem type CDATA #REQUIRED>
+<!ELEMENT fooditem (name, cost)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT cost (#PCDATA)>
+<!ELEMENT Ambience (type+)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT travel (traveltype+)>
+<!ELEMENT traveltype (name?, price?, own*)>
+<!ATTLIST traveltype type CDATA #REQUIRED>
+<!ELEMENT own (#PCDATA)>
+<!ELEMENT payment (mode+)>
+<!ELEMENT mode (#PCDATA)>
+<!ELEMENT discount (voucher+)>
+<!ELEMENT voucher (#PCDATA)>

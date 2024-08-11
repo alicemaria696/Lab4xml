@@ -1,0 +1,27 @@
+<!ELEMENT Restaurant (Company, Locations, Cafes, Menu, FoodItems, Ambience, TravelOptions, PaymentMethods, Discounts)>
+<!ELEMENT Company (CompanyName)>
+<!ELEMENT CompanyName (#PCDATA)>
+<!ELEMENT Locations (Location+)>
+<!ELEMENT Location (#PCDATA)>
+<!ELEMENT Cafes (Cafe+)>
+<!ELEMENT Cafe (CafeName, OpeningHours)>
+<!ELEMENT CafeName (#PCDATA)>
+<!ELEMENT OpeningHours (#PCDATA)>
+<!ELEMENT Menu (FoodType+)>
+<!ELEMENT FoodType (#PCDATA)>
+<!ELEMENT FoodItems (FoodItem+)>
+<!ELEMENT FoodItem (Name, Cost)>
+<!ATTLIST FoodItem type (Italian | Chinese | American | Desserts | Beverages) #REQUIRED>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Cost (#PCDATA)>
+<!ELEMENT Ambience (Type+)>
+<!ELEMENT Type (#PCDATA)>
+<!ELEMENT TravelOptions (TravelType+)>
+<!ELEMENT TravelType (Destination*, Price*)>
+<!ATTLIST TravelType type (bus | car | vehicle | metro) #REQUIRED>
+<!ELEMENT Destination (#PCDATA)>
+<!ELEMENT Price (#PCDATA)>
+<!ELEMENT PaymentMethods (PaymentMode+)>
+<!ELEMENT PaymentMode (#PCDATA)>
+<!ELEMENT Discounts (DiscountVoucher+)>
+<!ELEMENT DiscountVoucher (#PCDATA)>

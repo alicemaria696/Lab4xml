@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="restaurant.xsl"?>
+<!DOCTYPE Restaurant SYSTEM "restaurant.dtd">
+<?xml-model href="restaurant.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<Restaurant xmlns="http://www.example.com/restaurant">
+    <Company>
+        <CompanyName>Restaurant</CompanyName> 
+    </Company>
+    <Locations>
+        <Location>HSR</Location>
+        <Location>Koramangala</Location>
+        <Location>Madivala</Location>
+        <Location>ChurchStreet</Location>
+    </Locations>
+    <Cafes>
+        <Cafe>
+            <CafeName>Rameshwaram</CafeName>
+            <OpeningHours>6AM - 11PM</OpeningHours>
+        </Cafe>
+        <Cafe>
+            <CafeName>Akkacafe</CafeName>
+            <OpeningHours>9AM - 10PM</OpeningHours>
+        </Cafe>
+        <Cafe>
+            <CafeName>Truffles</CafeName>
+            <OpeningHours>11AM - 12PM</OpeningHours>
+        </Cafe>
+        <Cafe>
+            <CafeName>Alchemy</CafeName>
+            <OpeningHours>10AM - 11PM</OpeningHours>
+        </Cafe>
+    </Cafes>
+    <Menu>
+        <FoodType>Veg</FoodType>
+        <FoodType>Non-veg</FoodType>
+        <FoodType>Ketodiet</FoodType>
+    </Menu>
+    <FoodItems>
+        <FoodItem type="Italian">
+            <Name>Pasta</Name>
+            <Cost>350/-</Cost>
+        </FoodItem>
+        <FoodItem type="Chinese">
+            <Name>Noodles</Name>
+            <Cost>200/-</Cost>
+        </FoodItem>
+        <FoodItem type="Italian">
+            <Name>Pizza</Name>
+            <Cost>300/-</Cost>
+        </FoodItem>
+        <FoodItem type="American">
+            <Name>Burger</Name>
+            <Cost>190/-</Cost>
+        </FoodItem>
+        <FoodItem type="Desserts">
+            <Name>Tiramisu</Name>
+            <Cost>290/-</Cost>
+        </FoodItem>
+        <FoodItem type="Beverages">
+            <Name>Milkshakes</Name>
+            <Cost>190/-</Cost>
+        </FoodItem>
+    </FoodItems>
+    <Ambience>
+        <Type>Pottery</Type>
+        <Type>Artitery</Type>
+        <Type>Pub</Type>
+        <Type>Club</Type>
+    </Ambience>
+    <TravelOptions>
+        <TravelType type="bus">
+            <Destination>Koramangala</Destination>
+            <Price>20/-</Price>
+            <Destination>HSR</Destination>
+            <Price>30/-</Price>
+        </TravelType>
+        <TravelType type="car">
+            <FuelType>Diesel</FuelType>
+            <FuelType>Petrol</FuelType>
+        </TravelType>
+        <TravelType type="vehicle">
+            <FuelType>Diesel</FuelType>
+            <FuelType>Petrol</FuelType>
+        </TravelType>
+        <TravelType type="metro">
+            <Destination>Koramangala</Destination>
+            <Price>20/-</Price>
+            <Destination>HSR</Destination>
+            <Price>30/-</Price>
+        </TravelType>
+    </TravelOptions>
+    <PaymentMethods>
+        <PaymentMode>Gpay</PaymentMode>
+        <PaymentMode>PhonePe</PaymentMode>
+        <PaymentMode>PayTM</PaymentMode>
+    </PaymentMethods>
+    <Discounts>
+        <DiscountVoucher>Swiggy</DiscountVoucher>
+        <DiscountVoucher>Zomato Gold</DiscountVoucher>
+        <DiscountVoucher>Premium</DiscountVoucher>
+    </Discounts>
+</Restaurant>

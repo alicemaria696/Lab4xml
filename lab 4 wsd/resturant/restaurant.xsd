@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.example.com/restaurant"
+           targetNamespace="http://www.example.com/restaurant"
+           elementFormDefault="qualified">
+
+    <xs:element name="Restaurant">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Company">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="CompanyName" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Locations">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Location" type="xs:string" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Cafes">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Cafe" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="CafeName" type="xs:string"/>
+                                        <xs:element name="OpeningHours" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Menu">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="FoodType" type="xs:string" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="FoodItems">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="FoodItem" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Name" type="xs:string"/>
+                                        <xs:element name="Cost" type="xs:string"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="type" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="Italian"/>
+                                                <xs:enumeration value="Chinese"/>
+                                                <xs:enumeration value="American"/>
+                                                <xs:enumeration value="Desserts"/>
+                                                <xs:enumeration value="Beverages"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Ambience">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Type" type="xs:string" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TravelOptions">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="TravelType" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Destination" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                                        <xs:element name="Price" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="type" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="bus"/>
+                                                <xs:enumeration value="car"/>
+                                                <xs:enumeration value="vehicle"/>
+                                                <xs:enumeration value="metro"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PaymentMethods">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="PaymentMode" type="xs:string" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Discounts">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="DiscountVoucher" type="xs:string" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
