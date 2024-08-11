@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!ELEMENT placename (place+)>
+    <!ELEMENT place (#PCDATA)>
+
+    <!ELEMENT cafename (cafe, time)+>
+    <!ELEMENT cafe (#PCDATA)>
+    <!ELEMENT time (#PCDATA)>
+
+    <!ELEMENT menu (foodtype+)>
+    <!ELEMENT foodtype (#PCDATA)>
+
+    <!ELEMENT food (fooditem+)>
+    <!ELEMENT fooditem (name, cost)>
+    <!ATTLIST fooditem type CDATA #REQUIRED>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT cost (#PCDATA)>
+
+    <!ELEMENT Ambience (type+)>
+    <!ELEMENT type (#PCDATA)>
+
+    <!ELEMENT travel (traveltype+)>
+    <!ELEMENT traveltype (name, price)>
+    <!ATTLIST traveltype type CDATA #REQUIRED>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT price (#PCDATA)>
+
+    <!ELEMENT payment (mode+)>
+    <!ELEMENT mode (#PCDATA)>
+
+    <!ELEMENT discount (voucher+)>
+    <!ELEMENT voucher (#PCDATA)>
